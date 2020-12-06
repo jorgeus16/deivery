@@ -1,0 +1,20 @@
+{
+  "name": "delivery",
+  "version": "1.0.0",
+  "description": "API microservicio envios",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jorgeus16/deivery.git"
+  },
+  "homepage": "https://github.com/jorgeus16/deivery",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Jorge Ramos",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
