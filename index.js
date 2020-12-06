@@ -28,10 +28,13 @@ app.get(BASE_API_PATH + "/orders", (req, res) => {
             console.log(Date() + " - " + err);
             res.sendStatus(500);
         }else{
-            res.send(orders);
+            res.send(orders.map((order) => {
+                delete order._id;
+                return order;
+            }));
         }
     });
-    
+
 });
 
 app.post(BASE_API_PATH + "/orders", (req, res) => {
