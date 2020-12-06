@@ -22,7 +22,16 @@ app.get("/", (req, res) =>{
 
 app.get(BASE_API_PATH + "/orders", (req, res) => {
     console.log(Date() + " - GET /orders");
-    res.send([]);
+
+    db.find({}, (err, orders) => {
+        if(err) {
+            console.log(Date() + " - " + err);
+            res.sendStatus(500);
+        }else{
+            res.send(orders);
+        }
+    });
+    
 });
 
 app.post(BASE_API_PATH + "/orders", (req, res) => {
